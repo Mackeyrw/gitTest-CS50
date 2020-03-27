@@ -1,0 +1,42 @@
+header
+{
+    background-color: skyblue;
+    padding: 60px;
+    align-items: center;
+}
+
+header a
+{
+    font-size: 40px;
+    padding: 0px 75px 0px 75px;
+    font-family: Luminari;
+}
+
+body
+{
+    font-family: optima;
+}
+
+h1
+{
+    font-size: 50px;
+    color: darkblue;
+    font-family: Luminari;
+}
+
+h3
+{
+    color: darkred;
+    font-family: Luminari;
+}
+
+.fam
+{
+    width: 100%;
+    margin: auto;
+}
+
+.mary
+{
+    font-family: optima;
+}

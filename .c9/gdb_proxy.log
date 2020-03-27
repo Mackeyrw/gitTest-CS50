@@ -1,0 +1,675 @@
+
+
+Sat Feb 15 2020 21:15:35 GMT+0000 (Coordinated Universal Time)1-target-select remote localhost:15470
+
+GDB: =thread-group-added,id="i1"
+GDB: ~"Reading symbols from Readability..."
+GDB: ~"done.\n"
+GDB: =tsv-created,name="trace_timestamp",initial="0"\n
+GDB: =thread-group-started,id="i1",pid="6550"
+GDB: =thread-created,id="1",group-id="i1"
+GDB: ~"Reading /lib64/ld-linux-x86-64.so.2 from remote target...\n"
+GDB: &"warning: File transfers from remote targets can be slow. Use \"set sysroot\" to access files locally instead.\n"
+GDB: ~"Reading /lib64/ld-linux-x86-64.so.2 from remote target...\n"
+GDB: =library-loaded,id="/lib64/ld-linux-x86-64.so.2",target-name="/lib64/ld-linux-x86-64.so.2",host-name="target:/lib64/ld-linux-x86-64.so.2",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff7dd5f10",to="0x00007ffff7df4b20"}]
+GDB: ~"Reading /lib64/ld-2.27.so from remote target...\n"
+GDB: ~"Reading /lib64/.debug/ld-2.27.so from remote target...\n"
+GDB: ~"0x00007ffff7dd6090 in ?? () from target:/lib64/ld-linux-x86-64.so.2\n"
+GDB: *stopped,frame={addr="0x00007ffff7dd6090",func="??",args=[],from="target:/lib64/ld-linux-x86-64.so.2"},thread-id="1",stopped-threads="all",core="13"
+GDB: 1^connected
+2set breakpoint condition-evaluation host
+
+GDB: &"set breakpoint condition-evaluation host\n"
+GDB: =cmd-param-changed,param="breakpoint condition-evaluation",value="host"
+GDB: 2^done
+PROXY: server connected
+SENDING: Content-Length:9
+
+"connect"
+PLUGIN: Content-Length:29
+
+{"command":"bp-list","_id":1}
+3-break-list 
+
+GDB: 3^done,BreakpointTable={nr_rows="0",nr_cols="6",hdr=[{width="7",alignment="-1",col_name="number",colhdr="Num"},{width="14",alignment="-1",col_name="type",colhdr="Type"},{width="4",alignment="-1",col_name="disp",colhdr="Disp"},{width="3",alignment="-1",col_name="enabled",colhdr="Enb"},{width="10",alignment="-1",col_name="addr",colhdr="Address"},{width="40",alignment="2",col_name="what",colhdr="What"}],body=[]}
+SENDING: Content-Length:510
+
+{"_seq":"3","state":"done","status":{"BreakpointTable":{"nr_rows":"0","nr_cols":"6","hdr":[{"width":"7","alignment":"-1","col_name":"number","colhdr":"Num"},{"width":"14","alignment":"-1","col_name":"type","colhdr":"Type"},{"width":"4","alignment":"-1","col_name":"disp","colhdr":"Disp"},{"width":"3","alignment":"-1","col_name":"enabled","colhdr":"Enb"},{"width":"10","alignment":"-1","col_name":"addr","colhdr":"Address"},{"width":"40","alignment":"2","col_name":"what","colhdr":"What"}],"body":[]}},"_id":1}
+PLUGIN: Content-Length:209
+
+{"path":"/Readability/Readability.c","line":44,"column":0,"text":"Readability.c","content":"","time":1581801332080,"enabled":true,"fullpath":"/home/ubuntu/Readability/Readability.c","command":"bp-set","_id":2}
+4-break-insert "/home/ubuntu/Readability/Readability.c:45"
+
+GDB: 4^done,bkpt={number="1",type="breakpoint",disp="keep",enabled="y",addr="0x00000000004008e5",func="main",file="Readability.c",fullname="/home/ubuntu/Readability/Readability.c",line="45",thread-groups=["i1"],times="0",original-location="/home/ubuntu/Readability/Readability.c:45"}
+SENDING: Content-Length:344
+
+{"_seq":"4","state":"done","status":{"bkpt":{"number":"1","type":"breakpoint","disp":"keep","enabled":"y","addr":"0x00000000004008e5","func":"main","file":"Readability.c","fullname":"/home/ubuntu/Readability/Readability.c","line":"45","thread-groups":["i1"],"times":"0","original-location":"/home/ubuntu/Readability/Readability.c:45"}},"_id":2}
+PLUGIN: Content-Length:30
+
+{"command":"continue","_id":3}
+5-exec-continue 
+
+GDB: 5^running
+SENDING: Content-Length:50
+
+{"_seq":"5","state":"running","status":{},"_id":3}
+GDB: *running,thread-id="all"
+GDB: ~"Reading /lib/x86_64-linux-gnu/libcrypt.so.1 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libcrypt.so.1",target-name="/lib/x86_64-linux-gnu/libcrypt.so.1",host-name="target:/lib/x86_64-linux-gnu/libcrypt.so.1",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff7b9dd50",to="0x00007ffff7ba38b8"}]
+GDB: ~"Reading /usr/lib/libcs50.so.10 from remote target...\n"
+GDB: =library-loaded,id="/usr/lib/libcs50.so.10",target-name="/usr/lib/libcs50.so.10",host-name="target:/usr/lib/libcs50.so.10",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff7999c40",to="0x00007ffff799abb9"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libm.so.6 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libm.so.6",target-name="/lib/x86_64-linux-gnu/libm.so.6",host-name="target:/lib/x86_64-linux-gnu/libm.so.6",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff7606a80",to="0x00007ffff76c52f5"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libc.so.6 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libc.so.6",target-name="/lib/x86_64-linux-gnu/libc.so.6",host-name="target:/lib/x86_64-linux-gnu/libc.so.6",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff722b2d0",to="0x00007ffff73a3c3c"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libcrypt-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/libcrypt-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/libm-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/libm-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/libc-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/libc-2.27.so from remote target...\n"
+PLUGIN: Content-Length:29
+
+{"command":"suspend","_id":4}
+SENDING: Content-Length:27
+
+{"_id":4,"state":"stopped"}
+GDB: ~"\nProgram"
+GDB: ~" received signal SIGINT, Interrupt.\n"
+GDB: ~"0x00007ffff731a081 in __GI___libc_read (fd=0, buf=0x602260, nbytes=4096) at ../sysdeps/unix/sysv/linux/read.c:27\n"
+GDB: &"27\t../sysdeps/unix/sysv/linux/read.c: No such file or directory.\n"
+GDB: *stopped,reason="signal-received",signal-name="SIGINT",signal-meaning="Interrupt",frame={addr="0x00007ffff731a081",func="__GI___libc_read",args=[{name="fd",value="0"},{name="buf",value="0x602260"},{name="nbytes",value="4096"}],file="../sysdeps/unix/sysv/linux/read.c",fullname="/build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/read.c",line="27"},thread-id="1",stopped-threads="all",core="13"
+6-stack-list-frames 0 50
+
+GDB: 6^done,stack=[frame={level="0",addr="0x00007ffff731a081",func="__GI___libc_read",file="../sysdeps/unix/sysv/linux/read.c",fullname="/build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/read.c",line="27"},frame={level="1",addr="0x00007ffff7297148",func="_IO_new_file_underflow",file="fileops.c",fullname="/build/glibc-OTsEL5/glibc-2.27/libio/fileops.c",line="531"},frame={level="2",addr="0x00007ffff72983f2",func="__GI__IO_default_uflow",file="genops.c",fullname="/build/glibc-OTsEL5/glibc-2.27/libio/genops.c",line="380"},frame={level="3",addr="0x00007ffff7999f3d",func="get_string",from="target:/usr/lib/libcs50.so.10"},frame={level="4",addr="0x00000000004006e7",func="main",file="Readability.c",fullname="/home/ubuntu/Readability/Readability.c",line="15"}]
+7-stack-list-arguments --simple-values 0 50
+
+GDB: 7^done,stack-args=[frame={level="0",args=[{name="fd",type="int",value="0"},{name="buf",type="void *",value="0x602260"},{name="nbytes",type="size_t",value="4096"}]},frame={level="1",args=[{name="fp",type="_IO_FILE *",value="0x7ffff75f5a00 <_IO_2_1_stdin_>"}]},frame={level="2",args=[{name="fp",type="_IO_FILE *",value="0x7ffff75f5a00 <_IO_2_1_stdin_>"}]},frame={level="3",args=[]},frame={level="4",args=[]}]
+8-stack-list-locals --thread 1 --frame 4 --simple-values
+
+GDB: 8^done,locals=[{name="text",type="string",value="0x7fffffffe6d0 \"\\001\""}]
+9-stack-list-locals --thread 1 --frame 3 --simple-values
+
+GDB: 9^done,locals=[]
+10-stack-list-locals --thread 1 --frame 2 --simple-values
+
+GDB: 10^done,locals=[{name="ch",type="int",value="<optimized out>"}]
+11-stack-list-locals --thread 1 --frame 1 --simple-values
+
+GDB: 11^done,locals=[{name="count",type="__ssize_t",value="<optimized out>"}]
+12-stack-list-locals --thread 1 --frame 0 --simple-values
+
+GDB: 12^done,locals=[{name="resultvar",type="unsigned long",value="18446744073709551104"},{name="sc_ret",type="long",value="<optimized out>"}]
+13-var-update --all-values *
+
+GDB: 13^done,changelist=[]
+14-var-create - * text
+
+GDB: 14^error,msg="-var-create: unable to create variable object"
+15-var-create - * ch
+
+GDB: 15^error,msg="-var-create: unable to create variable object"
+16-var-create - * fp
+
+GDB: 16^error,msg="-var-create: unable to create variable object"
+17-var-create - * count
+
+GDB: 17^error,msg="-var-create: unable to create variable object"
+18-var-create - * fp
+
+GDB: 18^error,msg="-var-create: unable to create variable object"
+19-var-create - * sc_ret
+
+GDB: 19^done,name="var6",numchild="0",value="<optimized out>",type="long",thread-id="1",has_more="0"
+20-var-create - * resultvar
+
+GDB: 20^done,name="var7",numchild="0",value="18446744073709551104",type="unsigned long",thread-id="1",has_more="0"
+21-var-create - * nbytes
+
+GDB: 21^done,name="var8",numchild="0",value="4096",type="size_t",thread-id="1",has_more="0"
+22-var-create - * buf
+
+GDB: 22^done,name="var9",numchild="0",value="0x602260",type="void *",thread-id="1",has_more="0"
+23-var-create - * fd
+
+GDB: 23^done,name="var10",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+-stack-select-frame 0
+
+SENDING: Content-Length:1877
+
+{"err":"signal","signal":{"name":"SIGINT","text":"Interrupt"},"thread":"1","frames":[{"level":"0","addr":"0x00007ffff731a081","func":"__GI___libc_read","file":"../sysdeps/unix/sysv/linux/read.c","fullname":"/build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/read.c","line":"27","exists":false,"args":[{"name":"fd","type":"int","value":"0","objname":"var10","numchild":"0"},{"name":"buf","type":"void *","value":"0x602260","address":6300256,"objname":"var9","numchild":"0"},{"name":"nbytes","type":"size_t","value":"4096","objname":"var8","numchild":"0"}],"locals":[{"name":"resultvar","type":"unsigned long","value":"18446744073709551104","objname":"var7","numchild":"0"},{"name":"sc_ret","type":"long","value":"<optimized out>","objname":"var6","numchild":"0"}]},{"level":"1","addr":"0x00007ffff7297148","func":"_IO_new_file_underflow","file":"fileops.c","fullname":"/build/glibc-OTsEL5/glibc-2.27/libio/fileops.c","line":"531","exists":false,"args":[{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344}],"locals":[{"name":"count","type":"__ssize_t","value":"<optimized out>"}]},{"level":"2","addr":"0x00007ffff72983f2","func":"__GI__IO_default_uflow","file":"genops.c","fullname":"/build/glibc-OTsEL5/glibc-2.27/libio/genops.c","line":"380","exists":false,"args":[{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344}],"locals":[{"name":"ch","type":"int","value":"<optimized out>"}]},{"level":"3","addr":"0x00007ffff7999f3d","func":"get_string","from":"target:/usr/lib/libcs50.so.10","exists":false,"args":[],"locals":[]},{"level":"4","addr":"0x00000000004006e7","func":"main","file":"Readability.c","fullname":"/home/ubuntu/Readability/Readability.c","line":"15","exists":true,"args":[],"locals":[{"name":"text","type":"string","value":"0x7fffffffe6d0 \"\\001\""}]}]}
+GDB: ^done
+PLUGIN: Content-Length:28
+
+{"command":"finish","_id":5}
+24-exec-finish 
+
+GDB: 24^running
+SENDING: Content-Length:51
+
+{"_seq":"24","state":"running","status":{},"_id":5}
+GDB: *running,thread-id="all"
+PLUGIN: Content-Length:28
+
+{"command":"finish","_id":6}
+25-exec-finish 
+
+PLUGIN: Content-Length:28
+
+{"command":"finish","_id":7}
+26-exec-finish 
+
+PLUGIN: Content-Length:29
+
+{"command":"suspend","_id":8}
+SENDING: Content-Length:27
+
+{"_id":8,"state":"stopped"}
+GDB: ~"\nProgram"
+GDB: ~" received signal SIGINT, Interrupt.\n"
+GDB: ~"0x00007ffff731a081 in __GI___libc_read (fd=0, buf=0x602260, nbytes=4096) at ../sysdeps/unix/sysv/linux/read.c:27\n"
+GDB: ~"27\tin ../sysdeps/unix/sysv/linux/read.c\n"
+GDB: *stopped,reason="signal-received",signal-name="SIGINT",signal-meaning="Interrupt",frame={addr="0x00007ffff731a081",func="__GI___libc_read",args=[{name="fd",value="0"},{name="buf",value="0x602260"},{name="nbytes",value="4096"}],file="../sysdeps/unix/sysv/linux/read.c",fullname="/build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/read.c",line="27"},thread-id="1",stopped-threads="all",core="13"
+27-stack-list-frames 0 50
+
+GDB: 25^running
+SENDING: Content-Length:51
+
+{"_seq":"25","state":"running","status":{},"_id":6}
+GDB: *running,thread-id="all"
+PLUGIN: Content-Length:29
+
+{"command":"suspend","_id":9}
+SENDING: Content-Length:27
+
+{"_id":9,"state":"stopped"}
+GDB: ~"\nProgram"
+GDB: ~" received signal SIGINT, Interrupt.\n"
+GDB: ~"0x00007ffff731a081 in __GI___libc_read (fd=0, buf=0x602260, nbytes=4096) at ../sysdeps/unix/sysv/linux/read.c:27\n"
+GDB: ~"27\tin ../sysdeps/unix/sysv/linux/read.c\n"
+GDB: *stopped,reason="signal-received",signal-name="SIGINT",signal-meaning="Interrupt",frame={addr="0x00007ffff731a081",func="__GI___libc_read",args=[{name="fd",value="0"},{name="buf",value="0x602260"},{name="nbytes",value="4096"}],file="../sysdeps/unix/sysv/linux/read.c",fullname="/build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/read.c",line="27"},thread-id="1",stopped-threads="all",core="13"
+28-stack-list-frames 0 50
+
+GDB: 26^running
+SENDING: Content-Length:51
+
+{"_seq":"26","state":"running","status":{},"_id":7}
+GDB: *running,thread-id="all"
+PLUGIN: Content-Length:30
+
+{"command":"suspend","_id":10}
+SENDING: Content-Length:28
+
+{"_id":10,"state":"stopped"}
+GDB: ~"\nProgram"
+GDB: ~" received signal SIGINT, Interrupt.\n"
+GDB: ~"0x00007ffff731a081 in __GI___libc_read (fd=0, buf=0x602260, nbytes=4096) at ../sysdeps/unix/sysv/linux/read.c:27\n"
+GDB: ~"27\tin ../sysdeps/unix/sysv/linux/read.c\n"
+GDB: *stopped,reason="signal-received",signal-name="SIGINT",signal-meaning="Interrupt",frame={addr="0x00007ffff731a081",func="__GI___libc_read",args=[{name="fd",value="0"},{name="buf",value="0x602260"},{name="nbytes",value="4096"}],file="../sysdeps/unix/sysv/linux/read.c",fullname="/build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/read.c",line="27"},thread-id="1",stopped-threads="all",core="13"
+29-stack-list-frames 0 50
+
+GDB: 27^done,stack=[frame={level="0",addr="0x00007ffff731a081",func="__GI___libc_read",file="../sysdeps/unix/sysv/linux/read.c",fullname="/build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/read.c",line="27"},frame={level="1",addr="0x00007ffff7297148",func="_IO_new_file_underflow",file="fileops.c",fullname="/build/glibc-OTsEL5/glibc-2.27/libio/fileops.c",line="531"},frame={level="2",addr="0x00007ffff72983f2",func="__GI__IO_default_uflow",file="genops.c",fullname="/build/glibc-OTsEL5/glibc-2.27/libio/genops.c",line="380"},frame={level="3",addr="0x00007ffff7999f3d",func="get_string",from="target:/usr/lib/libcs50.so.10"},frame={level="4",addr="0x00000000004006e7",func="main",file="Readability.c",fullname="/home/ubuntu/Readability/Readability.c",line="15"}]
+30-stack-list-arguments --simple-values 0 50
+
+GDB: 28^done,stack=[frame={level="0",addr="0x00007ffff731a081",func="__GI___libc_read",file="../sysdeps/unix/sysv/linux/read.c",fullname="/build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/read.c",line="27"},frame={level="1",addr="0x00007ffff7297148",func="_IO_new_file_underflow",file="fileops.c",fullname="/build/glibc-OTsEL5/glibc-2.27/libio/fileops.c",line="531"},frame={level="2",addr="0x00007ffff72983f2",func="__GI__IO_default_uflow",file="genops.c",fullname="/build/glibc-OTsEL5/glibc-2.27/libio/genops.c",line="380"},frame={level="3",addr="0x00007ffff7999f3d",func="get_string",from="target:/usr/lib/libcs50.so.10"},frame={level="4",addr="0x00000000004006e7",func="main",file="Readability.c",fullname="/home/ubuntu/Readability/Readability.c",line="15"}]
+31-stack-list-arguments --simple-values 0 50
+
+GDB: 29^done,stack=[frame={level="0",addr="0x00007ffff731a081",func="__GI___libc_read",file="../sysdeps/unix/sysv/linux/read.c",fullname="/build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/read.c",line="27"},frame={level="1",addr="0x00007ffff7297148",func="_IO_new_file_underflow",file="fileops.c",fullname="/build/glibc-OTsEL5/glibc-2.27/libio/fileops.c",line="531"},frame={level="2",addr="0x00007ffff72983f2",func="__GI__IO_default_uflow",file="genops.c",fullname="/build/glibc-OTsEL5/glibc-2.27/libio/genops.c",line="380"},frame={level="3",addr="0x00007ffff7999f3d",func="get_string",from="target:/usr/lib/libcs50.so.10"},frame={level="4",addr="0x00000000004006e7",func="main",file="Readability.c",fullname="/home/ubuntu/Readability/Readability.c",line="15"}]
+32-stack-list-arguments --simple-values 0 50
+
+GDB: 30^done,stack-args=[frame={level="0",args=[{name="fd",type="int",value="0"},{name="buf",type="void *",value="0x602260"},{name="nbytes",type="size_t",value="4096"}]},frame={level="1",args=[{name="fp",type="_IO_FILE *",value="0x7ffff75f5a00 <_IO_2_1_stdin_>"}]},frame={level="2",args=[{name="fp",type="_IO_FILE *",value="0x7ffff75f5a00 <_IO_2_1_stdin_>"}]},frame={level="3",args=[]},frame={level="4",args=[]}]
+33-var-update --all-values *
+
+GDB: 31^done,stack-args=[frame={level="0",args=[{name="fd",type="int",value="0"},{name="buf",type="void *",value="0x602260"},{name="nbytes",type="size_t",value="4096"}]},frame={level="1",args=[{name="fp",type="_IO_FILE *",value="0x7ffff75f5a00 <_IO_2_1_stdin_>"}]},frame={level="2",args=[{name="fp",type="_IO_FILE *",value="0x7ffff75f5a00 <_IO_2_1_stdin_>"}]},frame={level="3",args=[]},frame={level="4",args=[]}]
+34-var-update --all-values *
+
+GDB: 32^done,stack-args=[frame={level="0",args=[{name="fd",type="int",value="0"},{name="buf",type="void *",value="0x602260"},{name="nbytes",type="size_t",value="4096"}]},frame={level="1",args=[{name="fp",type="_IO_FILE *",value="0x7ffff75f5a00 <_IO_2_1_stdin_>"}]},frame={level="2",args=[{name="fp",type="_IO_FILE *",value="0x7ffff75f5a00 <_IO_2_1_stdin_>"}]},frame={level="3",args=[]},frame={level="4",args=[]}]
+35-var-update --all-values *
+
+
+
+Sat Feb 15 2020 21:16:32 GMT+0000 (Coordinated Universal Time)1-target-select remote localhost:15470
+
+GDB: =thread-group-added,id="i1"
+GDB: ~"Reading symbols from Readability..."
+GDB: ~"done.\n"
+GDB: =tsv-created,name="trace_timestamp",initial="0"\n
+GDB: =thread-group-started,id="i1",pid="6759"
+GDB: =thread-created,id="1",group-id="i1"
+GDB: ~"Reading /lib64/ld-linux-x86-64.so.2 from remote target...\n"
+GDB: &"warning: File transfers from remote targets can be slow. Use \"set sysroot\" to access files locally instead.\n"
+GDB: ~"Reading /lib64/ld-linux-x86-64.so.2 from remote target...\n"
+GDB: =library-loaded,id="/lib64/ld-linux-x86-64.so.2",target-name="/lib64/ld-linux-x86-64.so.2",host-name="target:/lib64/ld-linux-x86-64.so.2",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff7dd5f10",to="0x00007ffff7df4b20"}]
+GDB: ~"Reading /lib64/ld-2.27.so from remote target...\n"
+GDB: ~"Reading /lib64/.debug/ld-2.27.so from remote target...\n"
+GDB: ~"0x00007ffff7dd6090 in ?? () from target:/lib64/ld-linux-x86-64.so.2\n"
+GDB: *stopped,frame={addr="0x00007ffff7dd6090",func="??",args=[],from="target:/lib64/ld-linux-x86-64.so.2"},thread-id="1",stopped-threads="all",core="14"
+GDB: 1^connected
+2set breakpoint condition-evaluation host
+
+GDB: &"set breakpoint condition-evaluation host\n"
+GDB: =cmd-param-changed,param="breakpoint condition-evaluation",value="host"
+GDB: 2^done
+PROXY: server connected
+SENDING: Content-Length:9
+
+"connect"
+PLUGIN: Content-Length:29
+
+{"command":"bp-list","_id":1}
+3-break-list 
+
+GDB: 3^done,BreakpointTable={nr_rows="0",nr_cols="6",hdr=[{width="7",alignment="-1",col_name="number",colhdr="Num"},{width="14",alignment="-1",col_name="type",colhdr="Type"},{width="4",alignment="-1",col_name="disp",colhdr="Disp"},{width="3",alignment="-1",col_name="enabled",colhdr="Enb"},{width="10",alignment="-1",col_name="addr",colhdr="Address"},{width="40",alignment="2",col_name="what",colhdr="What"}],body=[]}
+SENDING: Content-Length:510
+
+{"_seq":"3","state":"done","status":{"BreakpointTable":{"nr_rows":"0","nr_cols":"6","hdr":[{"width":"7","alignment":"-1","col_name":"number","colhdr":"Num"},{"width":"14","alignment":"-1","col_name":"type","colhdr":"Type"},{"width":"4","alignment":"-1","col_name":"disp","colhdr":"Disp"},{"width":"3","alignment":"-1","col_name":"enabled","colhdr":"Enb"},{"width":"10","alignment":"-1","col_name":"addr","colhdr":"Address"},{"width":"40","alignment":"2","col_name":"what","colhdr":"What"}],"body":[]}},"_id":1}
+PLUGIN: Content-Length:218
+
+{"path":"/Readability/Readability.c","line":44,"column":0,"text":"Readability.c","content":"","time":1581801332080,"enabled":true,"fullpath":"/home/ubuntu/Readability/Readability.c","command":"bp-set","_id":2,"id":"1"}
+4-break-insert "/home/ubuntu/Readability/Readability.c:45"
+
+GDB: 4^done,bkpt={number="1",type="breakpoint",disp="keep",enabled="y",addr="0x00000000004008e5",func="main",file="Readability.c",fullname="/home/ubuntu/Readability/Readability.c",line="45",thread-groups=["i1"],times="0",original-location="/home/ubuntu/Readability/Readability.c:45"}
+SENDING: Content-Length:344
+
+{"_seq":"4","state":"done","status":{"bkpt":{"number":"1","type":"breakpoint","disp":"keep","enabled":"y","addr":"0x00000000004008e5","func":"main","file":"Readability.c","fullname":"/home/ubuntu/Readability/Readability.c","line":"45","thread-groups":["i1"],"times":"0","original-location":"/home/ubuntu/Readability/Readability.c:45"}},"_id":2}
+PLUGIN: Content-Length:30
+
+{"command":"continue","_id":3}
+5-exec-continue 
+
+GDB: 5^running
+SENDING: Content-Length:50
+
+{"_seq":"5","state":"running","status":{},"_id":3}
+GDB: *running,thread-id="all"
+GDB: ~"Reading /lib/x86_64-linux-gnu/libcrypt.so.1 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libcrypt.so.1",target-name="/lib/x86_64-linux-gnu/libcrypt.so.1",host-name="target:/lib/x86_64-linux-gnu/libcrypt.so.1",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff7b9dd50",to="0x00007ffff7ba38b8"}]
+GDB: ~"Reading /usr/lib/libcs50.so.10 from remote target...\n"
+GDB: =library-loaded,id="/usr/lib/libcs50.so.10",target-name="/usr/lib/libcs50.so.10",host-name="target:/usr/lib/libcs50.so.10",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff7999c40",to="0x00007ffff799abb9"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libm.so.6 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libm.so.6",target-name="/lib/x86_64-linux-gnu/libm.so.6",host-name="target:/lib/x86_64-linux-gnu/libm.so.6",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff7606a80",to="0x00007ffff76c52f5"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libc.so.6 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libc.so.6",target-name="/lib/x86_64-linux-gnu/libc.so.6",host-name="target:/lib/x86_64-linux-gnu/libc.so.6",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff722b2d0",to="0x00007ffff73a3c3c"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libcrypt-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/libcrypt-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/libm-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/libm-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/libc-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/libc-2.27.so from remote target...\n"
+PLUGIN: Content-Length:29
+
+{"command":"suspend","_id":4}
+SENDING: Content-Length:27
+
+{"_id":4,"state":"stopped"}
+GDB: ~"\nProgram"
+GDB: ~" received signal SIGINT, Interrupt.\n"
+GDB: ~"0x00007ffff731a081 in __GI___libc_read (fd=0, buf=0x602260, nbytes=4096) at ../sysdeps/unix/sysv/linux/read.c:27\n"
+GDB: &"27\t../sysdeps/unix/sysv/linux/read.c: No such file or directory.\n"
+GDB: *stopped,reason="signal-received",signal-name="SIGINT",signal-meaning="Interrupt",frame={addr="0x00007ffff731a081",func="__GI___libc_read",args=[{name="fd",value="0"},{name="buf",value="0x602260"},{name="nbytes",value="4096"}],file="../sysdeps/unix/sysv/linux/read.c",fullname="/build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/read.c",line="27"},thread-id="1",stopped-threads="all",core="14"
+6-stack-list-frames 0 50
+
+GDB: 6^done,stack=[frame={level="0",addr="0x00007ffff731a081",func="__GI___libc_read",file="../sysdeps/unix/sysv/linux/read.c",fullname="/build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/read.c",line="27"},frame={level="1",addr="0x00007ffff7297148",func="_IO_new_file_underflow",file="fileops.c",fullname="/build/glibc-OTsEL5/glibc-2.27/libio/fileops.c",line="531"},frame={level="2",addr="0x00007ffff72983f2",func="__GI__IO_default_uflow",file="genops.c",fullname="/build/glibc-OTsEL5/glibc-2.27/libio/genops.c",line="380"},frame={level="3",addr="0x00007ffff7999f3d",func="get_string",from="target:/usr/lib/libcs50.so.10"},frame={level="4",addr="0x00000000004006e7",func="main",file="Readability.c",fullname="/home/ubuntu/Readability/Readability.c",line="15"}]
+7-stack-list-arguments --simple-values 0 50
+
+GDB: 7^done,stack-args=[frame={level="0",args=[{name="fd",type="int",value="0"},{name="buf",type="void *",value="0x602260"},{name="nbytes",type="size_t",value="4096"}]},frame={level="1",args=[{name="fp",type="_IO_FILE *",value="0x7ffff75f5a00 <_IO_2_1_stdin_>"}]},frame={level="2",args=[{name="fp",type="_IO_FILE *",value="0x7ffff75f5a00 <_IO_2_1_stdin_>"}]},frame={level="3",args=[]},frame={level="4",args=[]}]
+8-stack-list-locals --thread 1 --frame 4 --simple-values
+
+GDB: 8^done,locals=[{name="text",type="string",value="0x7fffffffe6d0 \"\\001\""}]
+9-stack-list-locals --thread 1 --frame 3 --simple-values
+
+GDB: 9^done,locals=[]
+10-stack-list-locals --thread 1 --frame 2 --simple-values
+
+GDB: 10^done,locals=[{name="ch",type="int",value="<optimized out>"}]
+11-stack-list-locals --thread 1 --frame 1 --simple-values
+
+GDB: 11^done,locals=[{name="count",type="__ssize_t",value="<optimized out>"}]
+12-stack-list-locals --thread 1 --frame 0 --simple-values
+
+GDB: 12^done,locals=[{name="resultvar",type="unsigned long",value="18446744073709551104"},{name="sc_ret",type="long",value="<optimized out>"}]
+13-var-update --all-values *
+
+GDB: 13^done,changelist=[]
+14-var-create - * text
+
+GDB: 14^error,msg="-var-create: unable to create variable object"
+15-var-create - * ch
+
+GDB: 15^error,msg="-var-create: unable to create variable object"
+16-var-create - * fp
+
+GDB: 16^error,msg="-var-create: unable to create variable object"
+17-var-create - * count
+
+GDB: 17^error,msg="-var-create: unable to create variable object"
+18-var-create - * fp
+
+GDB: 18^error,msg="-var-create: unable to create variable object"
+19-var-create - * sc_ret
+
+GDB: 19^done,name="var6",numchild="0",value="<optimized out>",type="long",thread-id="1",has_more="0"
+20-var-create - * resultvar
+
+GDB: 20^done,name="var7",numchild="0",value="18446744073709551104",type="unsigned long",thread-id="1",has_more="0"
+21-var-create - * nbytes
+
+GDB: 21^done,name="var8",numchild="0",value="4096",type="size_t",thread-id="1",has_more="0"
+22-var-create - * buf
+
+GDB: 22^done,name="var9",numchild="0",value="0x602260",type="void *",thread-id="1",has_more="0"
+23-var-create - * fd
+
+GDB: 23^done,name="var10",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+-stack-select-frame 0
+
+SENDING: Content-Length:1877
+
+{"err":"signal","signal":{"name":"SIGINT","text":"Interrupt"},"thread":"1","frames":[{"level":"0","addr":"0x00007ffff731a081","func":"__GI___libc_read","file":"../sysdeps/unix/sysv/linux/read.c","fullname":"/build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/read.c","line":"27","exists":false,"args":[{"name":"fd","type":"int","value":"0","objname":"var10","numchild":"0"},{"name":"buf","type":"void *","value":"0x602260","address":6300256,"objname":"var9","numchild":"0"},{"name":"nbytes","type":"size_t","value":"4096","objname":"var8","numchild":"0"}],"locals":[{"name":"resultvar","type":"unsigned long","value":"18446744073709551104","objname":"var7","numchild":"0"},{"name":"sc_ret","type":"long","value":"<optimized out>","objname":"var6","numchild":"0"}]},{"level":"1","addr":"0x00007ffff7297148","func":"_IO_new_file_underflow","file":"fileops.c","fullname":"/build/glibc-OTsEL5/glibc-2.27/libio/fileops.c","line":"531","exists":false,"args":[{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344}],"locals":[{"name":"count","type":"__ssize_t","value":"<optimized out>"}]},{"level":"2","addr":"0x00007ffff72983f2","func":"__GI__IO_default_uflow","file":"genops.c","fullname":"/build/glibc-OTsEL5/glibc-2.27/libio/genops.c","line":"380","exists":false,"args":[{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344}],"locals":[{"name":"ch","type":"int","value":"<optimized out>"}]},{"level":"3","addr":"0x00007ffff7999f3d","func":"get_string","from":"target:/usr/lib/libcs50.so.10","exists":false,"args":[],"locals":[]},{"level":"4","addr":"0x00000000004006e7","func":"main","file":"Readability.c","fullname":"/home/ubuntu/Readability/Readability.c","line":"15","exists":true,"args":[],"locals":[{"name":"text","type":"string","value":"0x7fffffffe6d0 \"\\001\""}]}]}
+GDB: ^done
+PLUGIN: Content-Length:26
+
+{"command":"next","_id":5}
+24-exec-next 
+
+GDB: 24^running
+SENDING: Content-Length:51
+
+{"_seq":"24","state":"running","status":{},"_id":5}
+GDB: *running,thread-id="all"
+PLUGIN: Content-Length:29
+
+{"command":"suspend","_id":6}
+SENDING: Content-Length:27
+
+{"_id":6,"state":"stopped"}
+GDB: ~"\nProgram"
+GDB: ~" received signal SIGINT, Interrupt.\n"
+GDB: ~"0x00007ffff731a081 in __GI___libc_read (fd=0, buf=0x602260, nbytes=4096) at ../sysdeps/unix/sysv/linux/read.c:27\n"
+GDB: ~"27\tin ../sysdeps/unix/sysv/linux/read.c\n"
+GDB: *stopped,reason="signal-received",signal-name="SIGINT",signal-meaning="Interrupt",frame={addr="0x00007ffff731a081",func="__GI___libc_read",args=[{name="fd",value="0"},{name="buf",value="0x602260"},{name="nbytes",value="4096"}],file="../sysdeps/unix/sysv/linux/read.c",fullname="/build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/read.c",line="27"},thread-id="1",stopped-threads="all",core="15"
+25-stack-list-frames 0 50
+
+GDB: 25^done,stack=[frame={level="0",addr="0x00007ffff731a081",func="__GI___libc_read",file="../sysdeps/unix/sysv/linux/read.c",fullname="/build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/read.c",line="27"},frame={level="1",addr="0x00007ffff7297148",func="_IO_new_file_underflow",file="fileops.c",fullname="/build/glibc-OTsEL5/glibc-2.27/libio/fileops.c",line="531"},frame={level="2",addr="0x00007ffff72983f2",func="__GI__IO_default_uflow",file="genops.c",fullname="/build/glibc-OTsEL5/glibc-2.27/libio/genops.c",line="380"},frame={level="3",addr="0x00007ffff7999f3d",func="get_string",from="target:/usr/lib/libcs50.so.10"},frame={level="4",addr="0x00000000004006e7",func="main",file="Readability.c",fullname="/home/ubuntu/Readability/Readability.c",line="15"}]
+26-stack-list-arguments --simple-values 0 50
+
+GDB: 26^done,stack-args=[frame={level="0",args=[{name="fd",type="int",value="0"},{name="buf",type="void *",value="0x602260"},{name="nbytes",type="size_t",value="4096"}]},frame={level="1",args=[{name="fp",type="_IO_FILE *",value="0x7ffff75f5a00 <_IO_2_1_stdin_>"}]},frame={level="2",args=[{name="fp",type="_IO_FILE *",value="0x7ffff75f5a00 <_IO_2_1_stdin_>"}]},frame={level="3",args=[]},frame={level="4",args=[]}]
+27-var-update --all-values *
+
+GDB: 27^done,changelist=[]
+-stack-select-frame 0
+
+SENDING: Content-Length:2001
+
+{"err":"signal","signal":{"name":"SIGINT","text":"Interrupt"},"thread":"1","frames":[{"level":"0","addr":"0x00007ffff731a081","func":"__GI___libc_read","file":"../sysdeps/unix/sysv/linux/read.c","fullname":"/build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/read.c","line":"27","exists":false,"args":[{"name":"nbytes","type":"size_t","value":"4096","objname":"var8","numchild":"0"},{"name":"buf","type":"void *","value":"0x602260","address":6300256,"objname":"var9","numchild":"0"},{"name":"fd","type":"int","value":"0","objname":"var10","numchild":"0"}],"locals":[{"name":"sc_ret","type":"long","value":"<optimized out>","objname":"var6","numchild":"0"},{"name":"resultvar","type":"unsigned long","value":"18446744073709551104","objname":"var7","numchild":"0"}]},{"level":"1","addr":"0x00007ffff7297148","func":"_IO_new_file_underflow","file":"fileops.c","fullname":"/build/glibc-OTsEL5/glibc-2.27/libio/fileops.c","line":"531","exists":false,"args":[{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344}],"locals":[{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344}]},{"level":"2","addr":"0x00007ffff72983f2","func":"__GI__IO_default_uflow","file":"genops.c","fullname":"/build/glibc-OTsEL5/glibc-2.27/libio/genops.c","line":"380","exists":false,"args":[{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344}],"locals":[{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344}]},{"level":"3","addr":"0x00007ffff7999f3d","func":"get_string","from":"target:/usr/lib/libcs50.so.10","exists":false,"args":[],"locals":[]},{"level":"4","addr":"0x00000000004006e7","func":"main","file":"Readability.c","fullname":"/home/ubuntu/Readability/Readability.c","line":"15","exists":true,"args":[],"locals":[{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344}]}]}
+GDB: ^done
+PLUGIN: Content-Length:26
+
+{"command":"step","_id":7}
+28-exec-step 
+
+GDB: 28^running
+SENDING: Content-Length:51
+
+{"_seq":"28","state":"running","status":{},"_id":7}
+GDB: *running,thread-id="all"
+PLUGIN: Content-Length:29
+
+{"command":"suspend","_id":8}
+SENDING: Content-Length:27
+
+{"_id":8,"state":"stopped"}
+GDB: ~"\nProgram"
+GDB: ~" received signal SIGINT, Interrupt.\n"
+GDB: ~"0x00007ffff731a081 in __GI___libc_read (fd=0, buf=0x602260, nbytes=4096) at ../sysdeps/unix/sysv/linux/read.c:27\n"
+GDB: ~"27\tin ../sysdeps/unix/sysv/linux/read.c\n"
+GDB: *stopped,reason="signal-received",signal-name="SIGINT",signal-meaning="Interrupt",frame={addr="0x00007ffff731a081",func="__GI___libc_read",args=[{name="fd",value="0"},{name="buf",value="0x602260"},{name="nbytes",value="4096"}],file="../sysdeps/unix/sysv/linux/read.c",fullname="/build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/read.c",line="27"},thread-id="1",stopped-threads="all",core="15"
+29-stack-list-frames 0 50
+
+GDB: 29^done,stack=[frame={level="0",addr="0x00007ffff731a081",func="__GI___libc_read",file="../sysdeps/unix/sysv/linux/read.c",fullname="/build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/read.c",line="27"},frame={level="1",addr="0x00007ffff7297148",func="_IO_new_file_underflow",file="fileops.c",fullname="/build/glibc-OTsEL5/glibc-2.27/libio/fileops.c",line="531"},frame={level="2",addr="0x00007ffff72983f2",func="__GI__IO_default_uflow",file="genops.c",fullname="/build/glibc-OTsEL5/glibc-2.27/libio/genops.c",line="380"},frame={level="3",addr="0x00007ffff7999f3d",func="get_string",from="target:/usr/lib/libcs50.so.10"},frame={level="4",addr="0x00000000004006e7",func="main",file="Readability.c",fullname="/home/ubuntu/Readability/Readability.c",line="15"}]
+30-stack-list-arguments --simple-values 0 50
+
+GDB: 30^done,stack-args=[frame={level="0",args=[{name="fd",type="int",value="0"},{name="buf",type="void *",value="0x602260"},{name="nbytes",type="size_t",value="4096"}]},frame={level="1",args=[{name="fp",type="_IO_FILE *",value="0x7ffff75f5a00 <_IO_2_1_stdin_>"}]},frame={level="2",args=[{name="fp",type="_IO_FILE *",value="0x7ffff75f5a00 <_IO_2_1_stdin_>"}]},frame={level="3",args=[]},frame={level="4",args=[]}]
+31-var-update --all-values *
+
+GDB: 31^done,changelist=[]
+-stack-select-frame 0
+
+SENDING: Content-Length:2001
+
+{"err":"signal","signal":{"name":"SIGINT","text":"Interrupt"},"thread":"1","frames":[{"level":"0","addr":"0x00007ffff731a081","func":"__GI___libc_read","file":"../sysdeps/unix/sysv/linux/read.c","fullname":"/build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/read.c","line":"27","exists":false,"args":[{"name":"nbytes","type":"size_t","value":"4096","objname":"var8","numchild":"0"},{"name":"buf","type":"void *","value":"0x602260","address":6300256,"objname":"var9","numchild":"0"},{"name":"fd","type":"int","value":"0","objname":"var10","numchild":"0"}],"locals":[{"name":"sc_ret","type":"long","value":"<optimized out>","objname":"var6","numchild":"0"},{"name":"resultvar","type":"unsigned long","value":"18446744073709551104","objname":"var7","numchild":"0"}]},{"level":"1","addr":"0x00007ffff7297148","func":"_IO_new_file_underflow","file":"fileops.c","fullname":"/build/glibc-OTsEL5/glibc-2.27/libio/fileops.c","line":"531","exists":false,"args":[{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344}],"locals":[{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344}]},{"level":"2","addr":"0x00007ffff72983f2","func":"__GI__IO_default_uflow","file":"genops.c","fullname":"/build/glibc-OTsEL5/glibc-2.27/libio/genops.c","line":"380","exists":false,"args":[{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344}],"locals":[{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344}]},{"level":"3","addr":"0x00007ffff7999f3d","func":"get_string","from":"target:/usr/lib/libcs50.so.10","exists":false,"args":[],"locals":[]},{"level":"4","addr":"0x00000000004006e7","func":"main","file":"Readability.c","fullname":"/home/ubuntu/Readability/Readability.c","line":"15","exists":true,"args":[],"locals":[{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344}]}]}
+GDB: ^done
+PLUGIN: Content-Length:26
+
+{"command":"next","_id":9}
+32-exec-next 
+
+GDB: 32^running
+SENDING: Content-Length:51
+
+{"_seq":"32","state":"running","status":{},"_id":9}
+GDB: *running,thread-id="all"
+PLUGIN: Content-Length:211
+
+{"path":"/Readability/Readability.c","line":52,"column":0,"text":"Readability.c","content":"}","time":1581801524413,"enabled":true,"fullpath":"/home/ubuntu/Readability/Readability.c","command":"bp-set","_id":10}
+33-break-insert "/home/ubuntu/Readability/Readability.c:53"
+
+PLUGIN: Content-Length:30
+
+{"command":"suspend","_id":11}
+SENDING: Content-Length:28
+
+{"_id":11,"state":"stopped"}
+GDB: ~"\nProgram"
+GDB: ~" received signal SIGINT, Interrupt.\n"
+GDB: ~"0x00007ffff731a081 in __GI___libc_read (fd=0, buf=0x602260, nbytes=4096) at ../sysdeps/unix/sysv/linux/read.c:27\n"
+GDB: ~"27\tin ../sysdeps/unix/sysv/linux/read.c\n"
+GDB: *stopped,reason="signal-received",signal-name="SIGINT",signal-meaning="Interrupt",frame={addr="0x00007ffff731a081",func="__GI___libc_read",args=[{name="fd",value="0"},{name="buf",value="0x602260"},{name="nbytes",value="4096"}],file="../sysdeps/unix/sysv/linux/read.c",fullname="/build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/read.c",line="27"},thread-id="1",stopped-threads="all",core="0"
+34-stack-list-frames 0 50
+
+GDB: 33^done,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00000000004009eb",func="main",file="Readability.c",fullname="/home/ubuntu/Readability/Readability.c",line="53",thread-groups=["i1"],times="0",original-location="/home/ubuntu/Readability/Readability.c:53"}
+SENDING: Content-Length:346
+
+{"_seq":"33","state":"done","status":{"bkpt":{"number":"2","type":"breakpoint","disp":"keep","enabled":"y","addr":"0x00000000004009eb","func":"main","file":"Readability.c","fullname":"/home/ubuntu/Readability/Readability.c","line":"53","thread-groups":["i1"],"times":"0","original-location":"/home/ubuntu/Readability/Readability.c:53"}},"_id":10}
+GDB: 34^done,stack=[frame={level="0",addr="0x00007ffff731a081",func="__GI___libc_read",file="../sysdeps/unix/sysv/linux/read.c",fullname="/build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/read.c",line="27"},frame={level="1",addr="0x00007ffff7297148",func="_IO_new_file_underflow",file="fileops.c",fullname="/build/glibc-OTsEL5/glibc-2.27/libio/fileops.c",line="531"},frame={level="2",addr="0x00007ffff72983f2",func="__GI__IO_default_uflow",file="genops.c",fullname="/build/glibc-OTsEL5/glibc-2.27/libio/genops.c",line="380"},frame={level="3",addr="0x00007ffff7999f3d",func="get_string",from="target:/usr/lib/libcs50.so.10"},frame={level="4",addr="0x00000000004006e7",func="main",file="Readability.c",fullname="/home/ubuntu/Readability/Readability.c",line="15"}]
+35-stack-list-arguments --simple-values 0 50
+
+GDB: 35^done,stack-args=[frame={level="0",args=[{name="fd",type="int",value="0"},{name="buf",type="void *",value="0x602260"},{name="nbytes",type="size_t",value="4096"}]},frame={level="1",args=[{name="fp",type="_IO_FILE *",value="0x7ffff75f5a00 <_IO_2_1_stdin_>"}]},frame={level="2",args=[{name="fp",type="_IO_FILE *",value="0x7ffff75f5a00 <_IO_2_1_stdin_>"}]},frame={level="3",args=[]},frame={level="4",args=[]}]
+36-var-update --all-values *
+
+GDB: 36^done,changelist=[]
+-stack-select-frame 0
+
+SENDING: Content-Length:2001
+
+{"err":"signal","signal":{"name":"SIGINT","text":"Interrupt"},"thread":"1","frames":[{"level":"0","addr":"0x00007ffff731a081","func":"__GI___libc_read","file":"../sysdeps/unix/sysv/linux/read.c","fullname":"/build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/read.c","line":"27","exists":false,"args":[{"name":"nbytes","type":"size_t","value":"4096","objname":"var8","numchild":"0"},{"name":"buf","type":"void *","value":"0x602260","address":6300256,"objname":"var9","numchild":"0"},{"name":"fd","type":"int","value":"0","objname":"var10","numchild":"0"}],"locals":[{"name":"sc_ret","type":"long","value":"<optimized out>","objname":"var6","numchild":"0"},{"name":"resultvar","type":"unsigned long","value":"18446744073709551104","objname":"var7","numchild":"0"}]},{"level":"1","addr":"0x00007ffff7297148","func":"_IO_new_file_underflow","file":"fileops.c","fullname":"/build/glibc-OTsEL5/glibc-2.27/libio/fileops.c","line":"531","exists":false,"args":[{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344}],"locals":[{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344}]},{"level":"2","addr":"0x00007ffff72983f2","func":"__GI__IO_default_uflow","file":"genops.c","fullname":"/build/glibc-OTsEL5/glibc-2.27/libio/genops.c","line":"380","exists":false,"args":[{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344}],"locals":[{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344}]},{"level":"3","addr":"0x00007ffff7999f3d","func":"get_string","from":"target:/usr/lib/libcs50.so.10","exists":false,"args":[],"locals":[]},{"level":"4","addr":"0x00000000004006e7","func":"main","file":"Readability.c","fullname":"/home/ubuntu/Readability/Readability.c","line":"15","exists":true,"args":[],"locals":[{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344}]}]}
+GDB: ^done
+PLUGIN: Content-Length:31
+
+{"command":"continue","_id":12}
+37-exec-continue 
+
+GDB: 37^running
+SENDING: Content-Length:52
+
+{"_seq":"37","state":"running","status":{},"_id":12}
+GDB: *running,thread-id="all"
+PLUGIN: Content-Length:222
+
+{"path":"/Readability/Readability.c","line":44,"column":0,"text":"Readability.c","content":"","time":1581801332080,"enabled":true,"fullpath":"/home/ubuntu/Readability/Readability.c","command":"bp-change","_id":13,"id":"1"}
+38-break-enable 1
+
+PLUGIN: Content-Length:223
+
+{"path":"/Readability/Readability.c","line":52,"column":0,"text":"Readability.c","content":"}","time":1581801524413,"enabled":true,"fullpath":"/home/ubuntu/Readability/Readability.c","command":"bp-change","_id":14,"id":"2"}
+39-break-enable 2
+
+PLUGIN: Content-Length:222
+
+{"path":"/Readability/Readability.c","line":44,"column":0,"text":"Readability.c","content":"","time":1581801332080,"enabled":true,"fullpath":"/home/ubuntu/Readability/Readability.c","command":"bp-change","_id":15,"id":"1"}
+40-break-enable 1
+
+PLUGIN: Content-Length:223
+
+{"path":"/Readability/Readability.c","line":52,"column":0,"text":"Readability.c","content":"}","time":1581801524413,"enabled":true,"fullpath":"/home/ubuntu/Readability/Readability.c","command":"bp-change","_id":16,"id":"2"}
+41-break-enable 2
+
+PLUGIN: Content-Length:30
+
+{"command":"suspend","_id":17}
+SENDING: Content-Length:28
+
+{"_id":17,"state":"stopped"}
+GDB: ~"\nProgram"
+GDB: ~" received signal SIGINT, Interrupt.\n"
+GDB: ~"0x00007ffff731a081 in __GI___libc_read (fd=0, buf=0x602260, nbytes=4096) at ../sysdeps/unix/sysv/linux/read.c:27\n"
+GDB: ~"27\tin ../sysdeps/unix/sysv/linux/read.c\n"
+GDB: *stopped,reason="signal-received",signal-name="SIGINT",signal-meaning="Interrupt",frame={addr="0x00007ffff731a081",func="__GI___libc_read",args=[{name="fd",value="0"},{name="buf",value="0x602260"},{name="nbytes",value="4096"}],file="../sysdeps/unix/sysv/linux/read.c",fullname="/build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/read.c",line="27"},thread-id="1",stopped-threads="all",core="0"
+42-stack-list-frames 0 50
+
+GDB: 38^done
+SENDING: Content-Length:49
+
+{"_seq":"38","state":"done","status":{},"_id":13}
+GDB: 39^done
+SENDING: Content-Length:49
+
+{"_seq":"39","state":"done","status":{},"_id":14}
+GDB: 40^done
+SENDING: Content-Length:49
+
+{"_seq":"40","state":"done","status":{},"_id":15}
+GDB: 41^done
+SENDING: Content-Length:49
+
+{"_seq":"41","state":"done","status":{},"_id":16}
+GDB: 42^done,stack=[frame={level="0",addr="0x00007ffff731a081",func="__GI___libc_read",file="../sysdeps/unix/sysv/linux/read.c",fullname="/build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/read.c",line="27"},frame={level="1",addr="0x00007ffff7297148",func="_IO_new_file_underflow",file="fileops.c",fullname="/build/glibc-OTsEL5/glibc-2.27/libio/fileops.c",line="531"},frame={level="2",addr="0x00007ffff72983f2",func="__GI__IO_default_uflow",file="genops.c",fullname="/build/glibc-OTsEL5/glibc-2.27/libio/genops.c",line="380"},frame={level="3",addr="0x00007ffff7999f3d",func="get_string",from="target:/usr/lib/libcs50.so.10"},frame={level="4",addr="0x00000000004006e7",func="main",file="Readability.c",fullname="/home/ubuntu/Readability/Readability.c",line="15"}]
+43-stack-list-arguments --simple-values 0 50
+
+GDB: 43^done,stack-args=[frame={level="0",args=[{name="fd",type="int",value="0"},{name="buf",type="void *",value="0x602260"},{name="nbytes",type="size_t",value="4096"}]},frame={level="1",args=[{name="fp",type="_IO_FILE *",value="0x7ffff75f5a00 <_IO_2_1_stdin_>"}]},frame={level="2",args=[{name="fp",type="_IO_FILE *",value="0x7ffff75f5a00 <_IO_2_1_stdin_>"}]},frame={level="3",args=[]},frame={level="4",args=[]}]
+44-var-update --all-values *
+
+GDB: 44^done,changelist=[]
+-stack-select-frame 0
+
+SENDING: Content-Length:2001
+
+{"err":"signal","signal":{"name":"SIGINT","text":"Interrupt"},"thread":"1","frames":[{"level":"0","addr":"0x00007ffff731a081","func":"__GI___libc_read","file":"../sysdeps/unix/sysv/linux/read.c","fullname":"/build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/read.c","line":"27","exists":false,"args":[{"name":"nbytes","type":"size_t","value":"4096","objname":"var8","numchild":"0"},{"name":"buf","type":"void *","value":"0x602260","address":6300256,"objname":"var9","numchild":"0"},{"name":"fd","type":"int","value":"0","objname":"var10","numchild":"0"}],"locals":[{"name":"sc_ret","type":"long","value":"<optimized out>","objname":"var6","numchild":"0"},{"name":"resultvar","type":"unsigned long","value":"18446744073709551104","objname":"var7","numchild":"0"}]},{"level":"1","addr":"0x00007ffff7297148","func":"_IO_new_file_underflow","file":"fileops.c","fullname":"/build/glibc-OTsEL5/glibc-2.27/libio/fileops.c","line":"531","exists":false,"args":[{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344}],"locals":[{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344}]},{"level":"2","addr":"0x00007ffff72983f2","func":"__GI__IO_default_uflow","file":"genops.c","fullname":"/build/glibc-OTsEL5/glibc-2.27/libio/genops.c","line":"380","exists":false,"args":[{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344}],"locals":[{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344}]},{"level":"3","addr":"0x00007ffff7999f3d","func":"get_string","from":"target:/usr/lib/libcs50.so.10","exists":false,"args":[],"locals":[]},{"level":"4","addr":"0x00000000004006e7","func":"main","file":"Readability.c","fullname":"/home/ubuntu/Readability/Readability.c","line":"15","exists":true,"args":[],"locals":[{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344}]}]}
+GDB: ^done
+PLUGIN: Content-Length:222
+
+{"path":"/Readability/Readability.c","line":52,"column":0,"text":"Readability.c","content":"}","time":1581801524413,"enabled":true,"fullpath":"/home/ubuntu/Readability/Readability.c","command":"bp-clear","_id":18,"id":"2"}
+45-break-delete 2
+
+GDB: 45^done
+SENDING: Content-Length:49
+
+{"_seq":"45","state":"done","status":{},"_id":18}
+PLUGIN: Content-Length:221
+
+{"path":"/Readability/Readability.c","line":44,"column":0,"text":"Readability.c","content":"","time":1581801332080,"enabled":true,"fullpath":"/home/ubuntu/Readability/Readability.c","command":"bp-clear","_id":19,"id":"1"}
+46-break-delete 1
+
+GDB: 46^done
+SENDING: Content-Length:49
+
+{"_seq":"46","state":"done","status":{},"_id":19}
+PLUGIN: Content-Length:277
+
+{"path":"/Readability/Readability.c","line":45,"column":4,"text":"Readability.c","content":"    L = round(lettercounter / (wordcounter / (100 / wordcounter)));","time":1581801598209,"enabled":true,"fullpath":"/home/ubuntu/Readability/Readability.c","command":"bp-set","_id":20}
+47-break-insert "/home/ubuntu/Readability/Readability.c:46"
+
+GDB: 47^done,bkpt={number="3",type="breakpoint",disp="keep",enabled="y",addr="0x00000000004008e5",func="main",file="Readability.c",fullname="/home/ubuntu/Readability/Readability.c",line="46",thread-groups=["i1"],times="0",original-location="/home/ubuntu/Readability/Readability.c:46"}
+SENDING: Content-Length:346
+
+{"_seq":"47","state":"done","status":{"bkpt":{"number":"3","type":"breakpoint","disp":"keep","enabled":"y","addr":"0x00000000004008e5","func":"main","file":"Readability.c","fullname":"/home/ubuntu/Readability/Readability.c","line":"46","thread-groups":["i1"],"times":"0","original-location":"/home/ubuntu/Readability/Readability.c:46"}},"_id":20}
+PLUGIN: Content-Length:252
+
+{"path":"/Readability/Readability.c","line":48,"column":4,"text":"Readability.c","content":"    index = 0.0588 * L - 0.296 * S - 15.8;","time":1581801601193,"enabled":true,"fullpath":"/home/ubuntu/Readability/Readability.c","command":"bp-set","_id":21}
+48-break-insert "/home/ubuntu/Readability/Readability.c:49"
+
+GDB: 48^done,bkpt={number="4",type="breakpoint",disp="keep",enabled="y",addr="0x0000000000400993",func="main",file="Readability.c",fullname="/home/ubuntu/Readability/Readability.c",line="49",thread-groups=["i1"],times="0",original-location="/home/ubuntu/Readability/Readability.c:49"}
+SENDING: Content-Length:346
+
+{"_seq":"48","state":"done","status":{"bkpt":{"number":"4","type":"breakpoint","disp":"keep","enabled":"y","addr":"0x0000000000400993","func":"main","file":"Readability.c","fullname":"/home/ubuntu/Readability/Readability.c","line":"49","thread-groups":["i1"],"times":"0","original-location":"/home/ubuntu/Readability/Readability.c:49"}},"_id":21}
+PLUGIN: Content-Length:279
+
+{"path":"/Readability/Readability.c","line":46,"column":4,"text":"Readability.c","content":"    S = round(sentencecounter / (wordcounter / (100 / wordcounter)));","time":1581801608490,"enabled":true,"fullpath":"/home/ubuntu/Readability/Readability.c","command":"bp-set","_id":22}
+49-break-insert "/home/ubuntu/Readability/Readability.c:47"
+
+GDB: 49^done,bkpt={number="5",type="breakpoint",disp="keep",enabled="y",addr="0x0000000000400944",func="main",file="Readability.c",fullname="/home/ubuntu/Readability/Readability.c",line="47",thread-groups=["i1"],times="0",original-location="/home/ubuntu/Readability/Readability.c:47"}
+SENDING: Content-Length:346
+
+{"_seq":"49","state":"done","status":{"bkpt":{"number":"5","type":"breakpoint","disp":"keep","enabled":"y","addr":"0x0000000000400944","func":"main","file":"Readability.c","fullname":"/home/ubuntu/Readability/Readability.c","line":"47","thread-groups":["i1"],"times":"0","original-location":"/home/ubuntu/Readability/Readability.c:47"}},"_id":22}
+PLUGIN: Content-Length:31
+
+{"command":"continue","_id":23}
+50-exec-continue 
+
+GDB: 50^running
+SENDING: Content-Length:52
+
+{"_seq":"50","state":"running","status":{},"_id":23}
+GDB: *running,thread-id="all"
+PLUGIN: Content-Length:30
+
+{"command":"suspend","_id":24}
+SENDING: Content-Length:28
+
+{"_id":24,"state":"stopped"}
+GDB: ~"\nProgram"
+GDB: ~" received signal SIGINT, Interrupt.\n"
+GDB: ~"0x00007ffff731a081 in __GI___libc_read (fd=0, buf=0x602260, nbytes=4096) at ../sysdeps/unix/sysv/linux/read.c:27\n"
+GDB: ~"27\tin ../sysdeps/unix/sysv/linux/read.c\n"
+GDB: *stopped,reason="signal-received",signal-name="SIGINT",signal-meaning="Interrupt",frame={addr="0x00007ffff731a081",func="__GI___libc_read",args=[{name="fd",value="0"},{name="buf",value="0x602260"},{name="nbytes",value="4096"}],file="../sysdeps/unix/sysv/linux/read.c",fullname="/build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/read.c",line="27"},thread-id="1",stopped-threads="all",core="0"
+51-stack-list-frames 0 50
+
+GDB: 51^done,stack=[frame={level="0",addr="0x00007ffff731a081",func="__GI___libc_read",file="../sysdeps/unix/sysv/linux/read.c",fullname="/build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/read.c",line="27"},frame={level="1",addr="0x00007ffff7297148",func="_IO_new_file_underflow",file="fileops.c",fullname="/build/glibc-OTsEL5/glibc-2.27/libio/fileops.c",line="531"},frame={level="2",addr="0x00007ffff72983f2",func="__GI__IO_default_uflow",file="genops.c",fullname="/build/glibc-OTsEL5/glibc-2.27/libio/genops.c",line="380"},frame={level="3",addr="0x00007ffff7999f3d",func="get_string",from="target:/usr/lib/libcs50.so.10"},frame={level="4",addr="0x00000000004006e7",func="main",file="Readability.c",fullname="/home/ubuntu/Readability/Readability.c",line="15"}]
+52-stack-list-arguments --simple-values 0 50
+
+GDB: 52^done,stack-args=[frame={level="0",args=[{name="fd",type="int",value="0"},{name="buf",type="void *",value="0x602260"},{name="nbytes",type="size_t",value="4096"}]},frame={level="1",args=[{name="fp",type="_IO_FILE *",value="0x7ffff75f5a00 <_IO_2_1_stdin_>"}]},frame={level="2",args=[{name="fp",type="_IO_FILE *",value="0x7ffff75f5a00 <_IO_2_1_stdin_>"}]},frame={level="3",args=[]},frame={level="4",args=[]}]
+53-var-update --all-values *
+
+GDB: 53^done,changelist=[]
+-stack-select-frame 0
+
+SENDING: Content-Length:2001
+
+{"err":"signal","signal":{"name":"SIGINT","text":"Interrupt"},"thread":"1","frames":[{"level":"0","addr":"0x00007ffff731a081","func":"__GI___libc_read","file":"../sysdeps/unix/sysv/linux/read.c","fullname":"/build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/read.c","line":"27","exists":false,"args":[{"name":"nbytes","type":"size_t","value":"4096","objname":"var8","numchild":"0"},{"name":"buf","type":"void *","value":"0x602260","address":6300256,"objname":"var9","numchild":"0"},{"name":"fd","type":"int","value":"0","objname":"var10","numchild":"0"}],"locals":[{"name":"sc_ret","type":"long","value":"<optimized out>","objname":"var6","numchild":"0"},{"name":"resultvar","type":"unsigned long","value":"18446744073709551104","objname":"var7","numchild":"0"}]},{"level":"1","addr":"0x00007ffff7297148","func":"_IO_new_file_underflow","file":"fileops.c","fullname":"/build/glibc-OTsEL5/glibc-2.27/libio/fileops.c","line":"531","exists":false,"args":[{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344}],"locals":[{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344}]},{"level":"2","addr":"0x00007ffff72983f2","func":"__GI__IO_default_uflow","file":"genops.c","fullname":"/build/glibc-OTsEL5/glibc-2.27/libio/genops.c","line":"380","exists":false,"args":[{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344}],"locals":[{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344}]},{"level":"3","addr":"0x00007ffff7999f3d","func":"get_string","from":"target:/usr/lib/libcs50.so.10","exists":false,"args":[],"locals":[]},{"level":"4","addr":"0x00000000004006e7","func":"main","file":"Readability.c","fullname":"/home/ubuntu/Readability/Readability.c","line":"15","exists":true,"args":[],"locals":[{"name":"fp","type":"_IO_FILE *","value":"0x7ffff75f5a00 <_IO_2_1_stdin_>","address":140737343609344}]}]}
+GDB: ^done
+PLUGIN: Content-Length:27
+
+{"command":"next","_id":25}
+54-exec-next 
+
+GDB: 54^running
+SENDING: Content-Length:52
+
+{"_seq":"54","state":"running","status":{},"_id":25}
+GDB: *running,thread-id="all"
+PLUGIN: Content-Length:27
+
+{"command":"step","_id":26}
+55-exec-step 
+
+PLUGIN: Content-Length:290
+
+{"path":"/Readability/Readability.c","line":46,"column":4,"text":"Readability.c","content":"    S = round(sentencecounter / (wordcounter / (100 / wordcounter)));","time":1581801608490,"enabled":true,"fullpath":"/home/ubuntu/Readability/Readability.c","command":"bp-clear","_id":27,"id":"5"}
+56-break-delete 5
+
+PLUGIN: Content-Length:263
+
+{"path":"/Readability/Readability.c","line":48,"column":4,"text":"Readability.c","content":"    index = 0.0588 * L - 0.296 * S - 15.8;","time":1581801601193,"enabled":true,"fullpath":"/home/ubuntu/Readability/Readability.c","command":"bp-clear","_id":28,"id":"4"}
+57-break-delete 4
+
+PLUGIN: Content-Length:288
+
+{"path":"/Readability/Readability.c","line":45,"column":4,"text":"Readability.c","content":"    L = round(lettercounter / (wordcounter / (100 / wordcounter)));","time":1581801598209,"enabled":true,"fullpath":"/home/ubuntu/Readability/Readability.c","command":"bp-clear","_id":29,"id":"3"}
+58-break-delete 3
+
+PLUGIN: Content-Length:29
+
+{"command":"detach","_id":30}
+59monitor exit
+
+SIGINT
